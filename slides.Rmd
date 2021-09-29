@@ -105,16 +105,16 @@ class: bottom
 
 ## Lecture learning goals
 
-1. Access function documentation.
+1. Access function **documentation**.
 --
 
-2. Ask questions effectively.
+2. **Ask questions** effectively.
 
 --
-3. Create a minimal reproducible examples.
+3. Create a **minimal reproducible examples**.
 
 --
-4. Manage virtual environments with conda and renv.
+4. Manage **virtual environments** with conda and renv.
 ---
 
 class: middle, inverse
@@ -124,27 +124,32 @@ class: middle, inverse
 ---
 ## Accessing help in R and Python
 
-In R, yo can use `?` to view the documentation (the "docstring"), e.g. ?len or ?seq. 
-In Python, you can put the `?` either before or after the object in Python, and if you use two ?? you can view the source code as well.
+##### R and Python
 
-Since it is not always convenient to type out the ?, there are shortcuts in common IDEs to view the docstrings. In RStudio, you can press F1 as you type a function or look it up in the help right away. In JupyterLab, you can press Shift + TAB or have the contextual help open on the side as you type.
+- Preface a function `?` to view the documentation. e.g. ?len or ?seq. 
+
+
+##### shortcuts 
+- In **RStudio**, you can press `F1`  
+
+- In **JupyterLab**, you can press `Shift` + `TAB` or have the **contextual help** open on the side as you type.
 
 ---
 
 ## Asking effective questions
 #### Why even bother?
-Asking questions effectively means that the person helping you will be able to answer your question better and quicker. Being able to answer a question quicker means more time to help others, including your future self. When questions require clarification, fewer people will be helped overall. Sometimes this in unavoidable because the question is complex, but all too often it if because the person trying to help is not able to reproduce problem, or the question is unclear.
+- Asking questions effectively means that the person helping you will be able to answer your question **better and quicker**.
 
-When you are asking for help online, e.g. on StackOverflow or on GitHub, remember that you are often receiving help from people who are volunteering their time. So please make it as easy as possible for them to help you.
-
-You might be frustrated by a problem to the point where you just want to as
+- When you are asking for help online, remember that you are often receiving help from people who are **volunteering their time**. 
 
 ---
 
+You might be frustrated by a problem...
+--
 
-You might be frustrated by a problem to the point where you just want to ask something like.
+### WHY IS THIS CODE NOT WORKING??????
 
-WHY IS THIS **** CODE NOT WORKING??????
+![](https://media.giphy.com/media/H8bzCgnzMVgWs/giphy.gif?cid=ecf05e47wjn3hub1dqr7tx5i28iu25b30hwelonsy73ycc2i&rid=giphy.gif&ct=g)
 
 Don't do this.
 No one will help you.
@@ -153,8 +158,8 @@ You will get more frustrated.
 ---
 
 
-```{r ch2, fig.align='center', echo = FALSE, out.width=800} 
-    knitr::include_graphics("img/code_hero.jpg")
+```{r ch2, fig.align='center', echo = FALSE, out.width=600} 
+knitr::include_graphics("img/code_hero.jpg")
 ```
 
 .footnote[[Illustration by Alison Horst](https://github.com/allisonhorst)]
@@ -162,92 +167,191 @@ You will get more frustrated.
 
 ---
 
+class: middle
 
-When I feel like this, I find it really helpful and calming to sit down and type out a proper question. You can start banging out words in the beginning, but as you slowly adhere to the format of asking properly, it will become like a meditative practice which also calms you down.
+### Writing down questions properly has another superb quality: they help you solve your own problems
 
-In addition to your mental wellbeing, writing down questions properly has another superb quality: they help you solve your own problems. The act of formulating a question in either speech or text helps you uncover what you missed while the problem was a mere thought. This is so common that it has a name: "Rubber duck debugging" allegedly from a software developer who put a rubber duck on their desk and whenever they had a problem they couldn't solve, they starting talking to the toy duck, and often came upon the resolution during while describing the problem.
 
 ---
+
+class: middle, inverse, center
 
 ## How to ask effectively
-In essence, you want to make your question as easy to understand as possible and your specific problem as easy to reproduce as possible. If you just include a screenshot and title your question "Help", the person helping you has to spend time trying to figure out what you actually want help with instead of helping, Instead include a succinct, clear description of your problem and the minimal code needed to reproduce it. If you are asking your question on stack overflow you can use tags to categorize it, and these can then be used to search for an answer via the syntax [tag-name]. This can be especially useful for R, since the name is just one letter and it can be hard to find relevant matches otherwise.
+---
+class: middle
+##### In essence, you want to make your question as **easy to understand** as possible and your specific problem as **easy to reproduce** as possible. .
 
 ---
 ### Minimal reproducible example
-There is a Swedish expression: "beloved child has many names". No, it does not translate very well to English, but the message is that someone or something that many people like, will be referred to differently by different people. This is true for minimal reproducible examples, which you might find referred to by any of the following:
 
-- MRE Minimal Reproducible Example
-- MCVE Minimal Complete Verifiable Example
-- MWE Minimal Working Example
-- reprex REPRoducible EXample
+Also known as...
 
-There have been great articles written on what goes into an MRE, and here are some of them that I recommend that you check out:
----
-### Minimal reproducible example
+- **MRE** Minimal Reproducible Example
+- **MCVE** Minimal Complete Verifiable Example
+- **MWE** Minimal Working Example
+- **reprex** REPRoducible EXample
 
-https://stackoverflow.com/help/how-to-ask
-https://stackoverflow.com/help/minimal-reproducible-example
-https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219
-https://reprex.tidyverse.org/ (an R package to help creating MREs from code)
-In summary, asking effectively and creating an MRE includes the following tasks:
 
 
 ---
 
 ### Minimal reproducible example
-- Search for other questions similar to yours.
 
--- 
+-  Search for other questions similar to yours.
 
+
+> Tip! Search like a Pro
+
+```{r gg, fig.align='center', echo = FALSE, out.width=500} 
+    knitr::include_graphics("img/google-search.jpg")
+```
+.footnote[[Image extracted from 23 Google Search Tips You'll Want to Learn - PCMAG](https://www.pcmag.com/how-to/23-google-search-tips-youll-want-to-learn)]
+
+
+---
+### Minimal reproducible example
+-  Search for other questions similar to yours.
+
+```{r tw, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width=500}
+  
+library(tweetrmd)
+tweet_screenshot(
+  tweet_url("denicmarko", "1434817434771406848"),
+  maxwidth = 300,
+  hide_media = TRUE
+)
+```
+.footnote[[Tweet](https://twitter.com/denicmarko/status/1434817434771406848?s=09)]
+
+---
+### Minimal reproducible example
+-  Search for other questions similar to yours.
+
+```{r gg2, fig.align='center', echo = FALSE, out.width=400} 
+    knitr::include_graphics("img/google-search2.jpg")
+```
+
+
+.footnote[[Tweet](https://twitter.com/CatchTheBaby/status/1432124463399641088)]
+
+---
+
+### Minimal reproducible example
+-  Search for other questions similar to yours.
+
+> Other tip! Are you including all the keywords?
+
+
+
+---
+
+### Minimal reproducible example
 - Describe the issue clearly in the title and elaborate briefly in the text body.
 
---
 
-- Reduce the code to the minimum required to recreate your error, and paste it as text.
 
---
+```{r title, fig.align='center', echo = FALSE, out.width=500} 
+    knitr::include_graphics("img/questions.png")
+```
 
-- If your code includes functions or classes, include their definitions.
+.footnote[[How do I ask a good question](https://stackoverflow.com/help/how-to-ask)]
 
---
+---
+### Minimal reproducible example
+- Reduce the code to the **minimum required** to recreate your error, and paste it as text.
+- If your code includes functions or classes, **include their definitions**.
+
+---
+### Minimal reproducible example
 
 - Create small toy dataset instead of using real data.
 
+--
+### How do to share a dataset in a forum?
+
+---
+
+---
+### Minimal reproducible example
+
+- Create small toy dataset instead of using real data.
+
+> Tip! There are functions that help you to share datasets easily!
+
+#### R
+
+- `dput()`
+
+- `datapasta` package
+
+#### Python
+
+- Python https://stackoverflow.com/questions/47450931/print-pandas-data-frame-for-reproducible-example-equivalent-to-dput-in-r
+
 ---
 
 
 ### Minimal reproducible example
 
-- Use markdown code blocks for proper indentation and syntax highlighting.
+- Use **markdown code blocks** for proper indentation and syntax highlighting.
+- **Inline code** should be surrounded by **single backticks** for clarity. 
 
---
-- Describe what you have tried so far, what you don't understand or what went wrong, including any error messages and their full traceback.
+
+---
+### Minimal reproducible example
+- Describe what you have tried so far, what you don't understand or what went wrong, including any **error messages** and their full traceback.
 
 --
 
 - The points are elaborated on below:
-
+- **Search for other questions similar to yours**
+  
 --
-- Search for other questions similar to yours. Many questions already have an answer, and finding it is faster both for you and for others. If the answer to an existing question is not good enough, improve it by adding the missing info!
-- Write the tile as a summary of your issue. Think about what you would want the title to say if you were searching the issue list for help. Just "Error" or "Question" is not helpful, but "How to list content in a folder?" is.
-- Introduce the problem by briefly describing what you want to do.
+  - **Write the title as a summary of your issue** 
+  Just "Error" or "Question" is not helpful, but "How to list content in a folder?" is.
+--
+  - **Introduce the problem by briefly describing what you want to do.**
 
 ---
 
 
 ### Minimal reproducible example
 
-- Show what you have tried, explain what you expected to happen, and what went wrong. It is often critical that the person helping you can reproduce the problem, so include both the code or command you tried to run and the error message.
-- For coding questions, text is preferred over a screenshot since it is easy to copy and paste, which facilitates reproducing your problem.
-- Inline code should be surrounded by single backticks for clarity. Longer blocks of code with multiple lines should be surrounded by triple backticks.
-- Include versions of any packages you are using, and the operating system if relevant, e.g. Win10, Python 3.8, pandas 1.0.2. On R you can use devtools::session_info() to see this information (after install.packages("devtools")). and on Python you can use sinfo() (after importing: from sinfo import sinfo, needs to be installed via pip install sinfo).
-- When your problem is solved, acknowledge the solution, close the issue/ticket/question. If you found the solution yourself, post it in a comment before closing, so that others can find it.
+- **Show what you have tried**, explain what you expected to happen, and what went wrong. It is often critical that the person helping you can reproduce the problem, so include both the code or command you tried to run and the error message.
+- For coding questions, **text is preferred over a screenshot** since it is easy to copy and paste, which facilitates **reproducing** your problem.
+
+
+---
+
+### Minimal reproducible example
+
+---
+
+### Minimal reproducible example
+
+- **Include versions of any packages you are using**, and the operating system if relevant, e.g. Win10, Python 3.8, pandas 1.0.2. 
+
+
+### R 
+`devtools::session_info()` to see this information 
+(after `install.packages("devtools")`) 
+
+
+### Python 
+`sinfo()` 
+(after importing: from `sinfo` import `sinfo`, needs to be installed via `pip install sinfo`).
+
+---
+
+### Minimal reproducible example
+
+- **When your problem is solved, acknowledge the solution**, close the issue/ticket/question. If you found the solution yourself, post it in a comment before closing, so that others can find it.
 
 
 
 ---
 
-class: middle, center
+class: middle, center, inverse
 
 ### Virtual environments
 
@@ -255,13 +359,18 @@ class: middle, center
 
 ## Virtual environments
 
-Virtual environments let's you have multiple versions of packages and programs on the same computer without them creating conflicts with each other. You will be using virtual Python and R environments throughout the program to setup your packages for different courses.
+- You can have multiple versions of packages and programs on the same computer without them creating conflicts with each other.
+
+
+- You will be using virtual **Python** and **R environments** throughout the program to setup your packages for different courses.
 
 ---
 
 ## Conda 
 
-conda is an open source package and **environment management system** for any programming language; though it is the most popular in the python community. 
+- **conda** is an **open source package** and **environment management system** for any programming language
+
+- It is the most popular in the python community. 
 
 ---
 ## Conda
@@ -335,15 +444,17 @@ Using conda, you can create an `isolated python environment for your project`.
 ---
 
 ## What is an Environment?
-- An environment is a set of packages that can be used in one or multiple projects. There are several major benefits of using environments:
+- An environment is a set of packages that can be used in one or multiple projects.
+
 --
-- You can guarantee that someone else can reproduce your project by specifying which package versions your used and making it easy for others to install the same versions.
+##### **Benefits** of using environments:
+  - You can guarantee that someone else can reproduce your project by specifying which package versions your used.
 --
-- If two of your projects relies on different versions of the same package, you can install these in different environments.
+  - If two of your projects relies on different versions of the same package, you can install these in different environments.
 --
-- If you want to play around with a new package, you don't have to change the packages you use for your data analysis and risk messing something up.
+  - If you want to play around with a new package, you don't have to change the packages you use for your data analysis and risk messing something up.
 --
-- When you develop your own packages, it is essential to use environments, since you want to to make sure you know exactly which packages yours depend on, so that it runs on other systems than your own.
+  - When you develop your own packages, it is essential to use environments, since you want to to make sure you know exactly which packages yours depend on, so that it runs on other systems than your own.
 
 
 ---
@@ -351,10 +462,10 @@ Using conda, you can create an `isolated python environment for your project`.
 ## Base environment
 
 Conda has a default environment called **base**
-- that include a Python installation 
-- and some core system libraries and dependencies of Conda. 
+- that include a Python installation and
+- some core system libraries and dependencies of Conda. 
 
-It is a “best practice” to avoid installing additional packages into your base software environment. 
+It is a **“best practice”** to avoid installing additional packages into your base software environment. 
  
 
 ---
@@ -363,8 +474,6 @@ It is a “best practice” to avoid installing additional packages into your ba
 
 There are two ways of creating a conda environment.
 
-
-
 1. Creating environment by manually specifying packages  
 
 --
@@ -372,7 +481,8 @@ There are two ways of creating a conda environment.
 
 ---
 
-## 1. Creating environment by manually specifying packages
+## Creating Conda environments
+#### 1. Creating environment by manually specifying packages
 We can create `test_env` conda environment by typing `conda -n <name-of-env>`. 
 
 ```
@@ -382,8 +492,8 @@ conda create -n test_env -c conda-forge python=3.7 jupyterlab pandas=1.0.2
 - Usually, we don't need to specify the channel, but in this case I want to get the very latest version of these packages, and they are made available in `conda-forge` before they reach the default conda channel.
 
 ---
-
-## 1. Creating environment by manually specifying packages
+## Creating Conda environments
+#### 1. Creating environment by manually specifying packages
 
 To activate this new environment, you can type
 
@@ -401,7 +511,8 @@ To see all your environments, you can type:
 conda env list
 ```
 ---
-## 2. An environment file in YAML format (*environment.yaml*).
+## Creating Conda environments
+#### 2. An environment file in YAML format (*environment.yaml*).
 
 Exporting your environment to a file called `environment.yaml` (it could be called anything, but this is the conventional name and using it makes it easy for others to recognize that this is a conda env file, the extension can be either .yaml or .yml):
 
@@ -409,28 +520,41 @@ Exporting your environment to a file called `environment.yaml` (it could be call
 
 
 ## Sharing Environments with others
-To share an environment, you can export your conda environment to an environment file, which will list each package and its version in the format package=version=build.
+Export your conda environment to an environment file, which will list each package and its version.
 
 
 ```
 conda env export -f environment.yaml
 ```
-Remember that `.yaml` files are plain text, so you can use a text editor such as VS Code to open them. If you do, you will realize that this environment file has A LOT more packages than jupyterlab and pandas. This is because the default behavior is to also list the dependencies that were installed together with these packages, e.g. numpy. This is good in the sense that it gives an exact copy of everything in your environment.
+Remember that `.yaml` files are plain text, so you can use a text editor such as VS Code to open them. 
+
+
+---
+## Sharing Environments with others
+The environment file has A LOT more packages than jupyterlab and pandas. 
+
+list the dependencies that were installed together with these packages, e.g. numpy. 
+
+This is good in the sense that it gives an **exact copy of everything in your environment**.
 
 
 ---
 
 ## Sharing Environments with others
 
-Exporting your environment to a file called **environment.yaml** (the extension can be either .yaml or .yml):
+Exporting your environment to a file called **environment.yaml** (the extension can be either `.yaml` or `.yml`):
 
 ```
 conda env export -f environment.yaml
 ```
 ---
 ## Sharing Environments with others
-However, some dependencies might differ between operating systems, to remedy this, we can append the `--from-history flag`, which look at the history of the packages you explicitly told conda to install and only list those in the export. 
-The required dependencies will then be handled in an OS-specific manner during the installation, which guarantees that they will work across OSes. This environment.yaml file would be much shorter and look something like this:
+Some dependencies might differ between operating systems,append the 
+`--from-history flag` which look at the history of the packages you explicitly told conda to install and only list those in the export. 
+
+The required dependencies will then be handled in an **OS-specific manner during the installation**, which guarantees that they will work across OSes. 
+
+This `environment.yaml` file would be much shorter:
 
 ```
 name: test_env
@@ -443,7 +567,9 @@ dependencies:
   - pandas==1.0.2
   - jupyterlab
 ```
-Importantly, this will not include the package version unless you included it when you installed with the package==version syntax. For an environment to be reproducible, you NEED to add the version string manually.
+Importantly, this will not include the package version unless you included it when you installed with the package==version syntax. 
+
+##### For an environment to be reproducible, you NEED to add the version string manually.
 
 ---
 ### Creating environment from an environment file
@@ -451,8 +577,10 @@ Now, let's install `environment.yaml` environment file above so that we can crea
 ```
 $ conda env create --file environment.yaml
 ```
+---
 
-Copying an environment
+## Copying an environment
+
 We can make an exact copy of an environment to an environment with a different name. This maybe useful for any testing versus live environments or different Python 2.7 versions for the same packages. In this example, test_env is cloned to create live_env.
 ```
 conda create --name live_env --clone test_env
@@ -460,7 +588,7 @@ conda create --name live_env --clone test_env
 
 ---
 ## Deleting an environment
-Since we are only testing out our environment, we will delete live_env to remove some clutter. Make sure that you are not currently using live_env.
+Since we are only testing out our environment, we will delete live_env.
 ```
 conda env remove -n live_env
 ```
@@ -477,9 +605,11 @@ Lastly, you also need to install a kernel in the new conda environment so that i
 ## Managing Packages
 #### Seeing what packages are available
 We will now check packages that are available to us. The command below will list all the packages in an environment, in this case test_env. The list will include versions of each package, the specific build, and the channel that the package was downloaded from. conda list is also useful to ensure that you have installed the packages that you desire.
-```
+
+```bash
 conda list
 ```
+
 ```bash
 # packages in environment at //miniconda/envs/test_env:
 #
@@ -493,12 +623,12 @@ functools32               3.2.3.2                  py27_1    conda-forge
 libgfortran               3.0.0                         0    conda-forge
 Searching for a certain package
 ```
-Some packages might not be available in conda, but are available in pypi. For example, we will search for rasterio within the anaconda cloud. It is not necessary to create an account with anaconda cloud, unless you'd like to contribute in the future when you are pro with conda.
+Some packages might not be available in conda, but are available in `pypi`. For example, we will search for rasterio within the anaconda cloud. It is not necessary to create an account with anaconda cloud, unless you'd like to contribute in the future when you are pro with conda.
 
 
 ---
 ## Managing Packages
-In this example, we will use rasterio from conda-forge. The anaconda cloud page for rasterio will show how to install the package, compatible OS, individual files for that package, etc.
+In this example, we will use `rasterio` from `conda-forge`. 
 
 With conda you can do this search within the command line:
 ```
@@ -553,7 +683,7 @@ conda config --add channels conda-forge
 
 ---
 ### Removing a conda Package
-We decided that rasterio is not needed in this tutorial, so we will remove it from test_env. Note that this will remove the main package rasterio and its dependencies (unless a dependency was installed explicitly at an earlier point in time or is required be another package).
+Note that this will remove the main package `rasterio` and its dependencies (unless a dependency was installed explicitly at an earlier point in time or is required be another package).
 ```
 conda remove -n test_env rasterio
 ```
@@ -580,14 +710,21 @@ Remeber that when you forget a specific command you can type in the help command
 ---
 
 # R environments
-In R, environments are managed by renv, which works with similar principles as conda, and other virtual environment managers, but the commands are different. To see which commands are used in renv, you can visit the project website. Briefly, renv::init() is used to create a new env, renv::snapshot is used to save/export the environment to a file (renv.lock), and installing and removing packages are done as usual via the install.packages() and remove.packages() commands.
+In R, environments are managed by `renv`, which works with similar principles as `conda`, and other virtual environment managers, but the commands are different.
 
 ---
 
 ## References
 
 .bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5[
-
+https://stackoverflow.com/help/how-to-ask
+https://stackoverflow.com/help/minimal-reproducible-example
+https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219
+https://reprex.tidyverse.org/ (an R package to help creating MREs from code)
+In summary, asking effectively and creating an MRE includes the following tasks:
+renv
+conda
+the carprntries
  [Elegant, flexible, and fast dynamic report generation with R](https://yihui.org/knitr/)
  
  [GitHub repo `here` package](https://github.com/jennybc/here_here)
